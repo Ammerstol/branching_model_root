@@ -1,0 +1,50 @@
+
+{
+    "experiment_name": "server_R_k_fixed_s1",
+
+    "target_bio_size": 100000,
+    "sampling_fraction": 1.0,
+
+    "parameter_grid": {
+        "R": [
+            1.4285714285714286,
+            2.5
+        ],
+
+        "k": [
+            0.1,
+            0.5
+        ],
+
+        "nu": [
+            0.1,
+            0.2,
+            0.3,
+            0.4,
+            0.5,
+            0.6,
+            0.7,
+            0.8,
+            0.9
+        ]
+    },
+
+    "empirical": {
+        "replicates": 2000,
+        "percentile_cutoff": 99.5,
+        "max_attempts": 2000,
+        "num_cores": 4
+    },
+
+    "inference": {
+        "replicates": 5,
+        "max_steps": 2000,
+        "ftol": 1e-9,
+        "num_cores": 20,
+
+        "bounds": {
+            "R": [1.001, 20.0],
+            "k": [0.001, 10.0]
+        }
+    }
+}

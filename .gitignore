@@ -1,9 +1,14 @@
-cat > .gitignore << 'EOF'
-__pycache__/
-*.pyc
-venv/
+# Python environments
 .venv/
-.env
-.ipynb_checkpoints/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# macOS
 .DS_Store
-EOF
+
+# Generated simulation datasets (potentially large)
+experiments/results/**/simulation_data/

@@ -1,0 +1,40 @@
+
+{
+    "experiment_name": "test",
+
+    "target_bio_size": 100,
+    "sampling_fraction": 1.0,
+
+    "parameter_grid": {
+        "R": [
+            1.4285714285714286
+        ],
+
+        "k": [
+            0.5
+        ],
+
+        "nu": [
+            0.3
+        ]
+    },
+
+    "empirical": {
+        "replicates": 20,
+        "percentile_cutoff": 99.5,
+        "max_attempts": 2000,
+        "num_cores": 4
+    },
+
+    "inference": {
+        "replicates": 5,
+        "max_steps": 2000,
+        "ftol": 1e-9,
+        "num_cores": 5,
+
+        "bounds": {
+            "R": [1.001, 20.0],
+            "k": [0.001, 10.0]
+        }
+    }
+}
